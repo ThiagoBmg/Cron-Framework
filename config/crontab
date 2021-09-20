@@ -1,0 +1,2 @@
+* * * * * root python3 /usr/jobs/scripts/01_get_api.py >> /var/log/01_get_api.log 2>&1
+#Empty Line
