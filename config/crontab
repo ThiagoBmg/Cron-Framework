@@ -1,2 +1,2 @@
-* * * * * root python3 /usr/cronjobs/scripts/01_get_api.py >> /var/log/01_get_api.log 2>&1
+* * * * * root python3 /usr/cronjobs/scripts/01_get_api.py >> /usr/cronjobs/scripts/log/01_get_api.log 2>&1
 #Empty Line

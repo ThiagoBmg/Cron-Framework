@@ -1,23 +1,24 @@
 import requests
 from datetime import datetime
+import os
+import logging
 
-from ..config.log import Log_model
-
-log = Log_model()
-
-log.l_debug('Teste manolo doido')
-
+current_dir  = os.path.dirname(os.path.abspath(__file__))
+logging.basicConfig(filename=f"{current_dir}/log/cronjobs.log", level=logging.DEBUG, format=f'[%(asctime)s] %(levelname)s - [%(filename)s]: %(message)s')
 
 def getSomething():
     data = datetime.today().strftime('%Y-%m-%d-%H:%M:%S')
-    print(f'iniciando job API ${data}')
+    logging.warning(f'iniciando job API')
     request = requests.get(
         url= 'https://api.github.com/user/',
         headers={"accept": "application/vnd.github.v3+json"},
         params={"name":"ThiagoBmg"}
     )
-    print(f'Usuário localizado com sucesso -> ${request.json()}')
-    print(f"concluindo job API {data}")
+    logging.error(f'Usuário localizado com sucesso -> ${request.json()}')
+    logging.debug(f"concluindo job API")
     pass
 
+
 getSomething()
+
+   

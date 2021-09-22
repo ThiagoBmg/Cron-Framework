@@ -13,6 +13,6 @@ COPY ./requirements.txt /usr/cronjobs/requirements.txt
 
 RUN  pip install -r /usr/cronjobs/requirements.txt
 
-RUN touch /var/log/01_get_api.log
+RUN touch /usr/cronjobs/scripts/log/01_get_api.log && touch /usr/cronjobs/scripts/log/cronjobs.log
 
-CMD cron && tail -f /var/log/01_get_api.log
+CMD cron && tail -f /usr/cronjobs/scripts/log/cronjobs.log

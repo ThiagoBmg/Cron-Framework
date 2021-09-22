@@ -1,0 +1,5 @@
+[2021-09-21 23:27:30,052] WARNING - [01_get_api.py]: iniciando job API
+[2021-09-21 23:27:30,056] DEBUG - [connectionpool.py]: Starting new HTTPS connection (1): api.github.com:443
+[2021-09-21 23:27:30,280] DEBUG - [connectionpool.py]: https://api.github.com:443 "GET /user/?name=ThiagoBmg HTTP/1.1" 404 91
+[2021-09-21 23:27:30,281] ERROR - [01_get_api.py]: Usuário localizado com sucesso -> ${'message': 'Not Found', 'documentation_url': 'https://docs.github.com/rest'}
+[2021-09-21 23:27:30,281] DEBUG - [01_get_api.py]: concluindo job API
