@@ -8,10 +8,10 @@ RUN apt update && apt install \
 
 ADD ./config/crontab /etc/cron.d/cronjobs
 
-COPY ./jobs /usr/jobs/scripts/
-COPY ./requirements.txt /usr/jobs/requirements.txt
+COPY ./cronjobs /usr/cronjobs/scripts/
+COPY ./requirements.txt /usr/cronjobs/requirements.txt
 
-RUN  pip install -r /usr/jobs/requirements.txt
+RUN  pip install -r /usr/cronjobs/requirements.txt
 
 RUN touch /var/log/01_get_api.log
 

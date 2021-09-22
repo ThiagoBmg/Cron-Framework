@@ -1,7 +1,12 @@
 import requests
 from datetime import datetime
 
-from requests.api import head
+from ..config.log import Log_model
+
+log = Log_model()
+
+log.l_debug('Teste manolo doido')
+
 
 def getSomething():
     data = datetime.today().strftime('%Y-%m-%d-%H:%M:%S')
