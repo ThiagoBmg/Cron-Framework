@@ -8,7 +8,7 @@ RUN apt update && apt install \
 
 ADD ./config/crontab /etc/cron.d/cronjobs
 
-COPY ./cronjobs /usr/cronjobs/scripts/
+COPY ./jobs /usr/cronjobs/scripts/
 
 RUN mkdir -p /usr/cronjobs/scripts/log/
 
